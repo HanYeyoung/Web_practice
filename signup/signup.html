@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup Page</title>
+    <link href="signup.css" rel="stylesheet">
+    <script src="signup.js" ></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h3>New Account Signup</h3>
+        <input class="inputbox" id="email" type="text" placeholder="Type your email.">
+        <div class="error" id="error__email"></div>
+        <input class="inputbox" id="name" type="text" placeholder="Type your name.">
+        <div class="error" id="error__name"></div>
+        <input class="inputbox" id="password1" type="password" placeholder="Type your password.">
+        <div class="error" id="error__password1"></div>
+        <input class="inputbox" id="password2" type="password" placeholder="Type your password again.">
+        <div class="error" id="error__password2"></div>
+        <div class="phone__wrapper">
+            <input id="phone1" class="phoneNum" type="text" onchange="changePhone1()" onkeyup="onchange()"> -
+            <input id="phone2" class="phoneNum" onchange="changePhone2()" onkeyup="onchange()"> -
+            <input id="phone3" class="phoneNum" onchange="changePhone3()" onkeyup="onchange()">
+        </div>
+        <div class="token__wrapper">
+            <div class="token" id="token">000000</div>
+            <button id="token__button" onclick="getToken()" disabled>Send code</button>
+        </div>
+        <div class="token__wrapper">
+            <div class="token__timer" id="token__timer">3:00</div>
+            <button id="token__timer__confirm__button" onclick="getTokenTimerConfirm()" disabled>Validate</button>
+        </div>
+        <div class="location__wrapper">
+            <select class="location" id="location">
+                <option selected disabled>Choose your location.</option>
+                <option>South Korea</option>
+                <option>United States</option>
+                <option>Japan</option>
+            </select>
+        </div>
+        <div class="error" id="error__location"></div>
+        <div class="gender__wrapper">
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__woman" class="gender__radio"> Female
+            </div>
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__man" class="gender__radio"> Male
+            </div>
+        </div>
+        <div class="error" id="error__gender"></div>
+        <hr />
+        <div class="footer">
+            <button id="signup__button" onclick="signup()" disabled>Signup</button>
+        </div>
+    </div>
+</body>
+</html>
